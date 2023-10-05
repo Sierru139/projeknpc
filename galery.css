@@ -1,0 +1,513 @@
+/* box reset --------------------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* clear fix ------------------------------------------*/
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+.cf {
+  *zoom: 1;
+}
+
+/* Style ---------------------------------------------------------*/
+
+@font-face {
+  font-family: bricolage;
+  src: url(../Css/BricolageGrotesque-VariableFont_opsz\wdth\wght.ttf);
+}
+
+body {
+  font: 16px/28px arial, sans-serif;
+  background-image: url(../html/moroccan-flower-dark.webp);
+  color: #333;
+}
+/* Navigation Bar ------------------------------------------------ */
+
+nav {
+  background-image: linear-gradient(#066ec7, #2c859e);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  flex-wrap: wrap;
+  overflow: auto;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+nav img {
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  margin: 10px -15px -5px 20px;
+}
+
+label.logo {
+  color: white;
+  font-family: caveat;
+  font-size: 40px;
+  line-height: 70px;
+  padding: 0 30px;
+  font-weight: bold;
+  text-shadow: 0 3px 1px black;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 17px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #1b9bff;
+  transition: 0.5s;
+}
+
+.container {
+  background-color: #2c859e;
+  width: 1060px;
+  margin: 90px auto;
+  color: #ccc;
+  overflow: hidden;
+}
+
+.header {
+  padding: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #6efaf8;
+}
+
+.header .judul {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header ul li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #6efaf8;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+.header a:hover {
+  background-color: lightblue;
+  color: white;
+  border-radius: 25%;
+}
+.gallery ul {
+  text-align: center;
+}
+
+.gallery li {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #444;
+  float: left;
+  margin: 20px 55px;
+  margin-right: 20px;
+  margin-top: 20px;
+  transform: scale(1);
+  position: relative;
+  font-family: bricolage, sans-serif;
+  text-align: center;
+}
+
+.gallery li .yasir,
+.gallery li .yasir1 {
+  margin-left: -20px;
+  margin-top: -18px;
+}
+
+.gallery li span {
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(200, 200, 200, 0.5);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 120px;
+  color: #444;
+  text-shadow: 1px 1px 1px #ddd;
+  opacity: 0;
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.gallery li a:hover span {
+  opacity: 1;
+  transform: scale(1.5);
+  margin-left: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Navigasi */
+.next {
+  width: 75px;
+  height: 75px;
+  background-image: url(../Css/next.png);
+  position: absolute;
+  text-indent: -9999px;
+  z-index: 10;
+  top: 73%;
+  left: 87%;
+  margin: 2px;
+}
+
+.prev {
+  width: 75px;
+  height: 75px;
+  background-image: url(../Css/previouspng.png);
+  position: absolute;
+  text-indent: -9999px;
+  z-index: 10;
+  top: 73%;
+  left: 21%;
+  margin: 2px;
+}
+
+/* overlay======================================================== */
+
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.5s;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay img {
+  margin-left: -355px;
+  max-height: 100%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+
+.overlay .caption {
+  height: 424px;
+  width: 500px;
+  padding: 10px;
+  position: absolute;
+  top: 100px;
+  left: 650px;
+  text-align: left;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+
+.overlay:target img {
+  animation: fade 1s;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 60px;
+  left: 49%;
+  margin-left: 0;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  line-height: 18px;
+  padding: 5px 9px;
+  animation: fade;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.overlay:target .close {
+  animation: fadeslide 0.5s 0.5s forwards;
+}
+
+/* Footer =========================================================*/
+.footer {
+  background-color: #333;
+  padding: 7px;
+  text-align: center;
+}
+
+.footer .copy {
+  color: #eaeaea;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer .sosmed {
+  display: inline-block;
+  color: white;
+  text-align: left;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #63faf6;
+  display: inline-block;
+  text-align: center;
+}
+
+.footer ul li {
+  display: inline-block;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Check BTN ==================================================== */
+.desc {
+  padding: 10px;
+  text-align: center;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    transition: all 0.5s;
+    text-align: center;
+  }
+  nav ul li {
+    display: block;
+    line-height: 30px;
+    padding: 20px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover {
+    background: none;
+    color: #2c3e50;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+/* Animation==================================================== */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 1;
+  }
+}
+
+@keyframes fadeslide {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+
+  100% {
+    opacity: 1;
+    margin: 0;
+  }
+}
